@@ -1,7 +1,12 @@
+body {
+	background-color: lightgray;
+}
+
 .button {
-	height: 100px;
+	height: 30px;
 	width: 100px;
-	background-color: red;
+	color: white;
+	background-color: DarkCyan;
 
 }
 
@@ -12,5 +17,11 @@
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10%;
+	padding: 20px;
+	border: 2px solid dimgray;
+}
 
+.content {
+	text-align: center;
 }

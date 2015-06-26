@@ -17,7 +17,7 @@ $(document).ready(function(){
 //.......part two............
 
  	$('p').mouseover(function() {
- 		$(this).css('color', 'pink');
+ 		$(this).css('color', 'DeepPink');
  	});
  	$('h1').append("!");
  	$('a').click(function() {
@@ -25,8 +25,8 @@ $(document).ready(function(){
  		if (selection === true) {
 
  		}
- 		else {
- 			$('a').remove();
+ 		else { 
+ 			$(this).remove();
  			return false;
  		}
  	});
@@ -37,27 +37,28 @@ $(document).ready(function(){
 		$('body').append('<div class="pop-window">"This is a pop up!"<button id="closeButton">close</button></div>');
 		$( '.pop-window' ).css({
 	      "position": "fixed",
-	      "height": "600px",
-	      "width": "700px",
+	      "height": "70%",
+	      "width": "60%",
 	      "top": "20%",
-	      "left": "0%",
-	      "right": "0%",
+	      "left": "20%",
+	      "right": "20%",
 	      "background-color": "plum",
-	      "color": "white"
+	      "color": "white",
+	      "text-align":"center",
+	      "padding":"20px"
 	    });
 	    $( '#closeButton' ).css({
 	    	"float":"right",
 		    "display":"inline-block",
 		    "padding":"2px 5px",
 		    "background-color":"white",
-		    "color": "gray"
 	    });
 
 	});
 
 	    $('body').on('click', '#closeButton', function() {
 	    	console.log( $('.pop-window') 	);
-	    	$(this).parent().fadeOut();
+	    	$(this).parent().remove();
 	    });
 
 
